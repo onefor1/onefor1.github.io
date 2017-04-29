@@ -90,10 +90,10 @@ comments_provider: netease_gentie
 disqus_username: onefor1
 netease_gentie_key: 4553b0fa1bd94f608325d822ee801a5d
 # 在使用网易云跟帖时可点击显示 Disqus
-lazy_load_disqus : true
+lazy_load_disqus : false
 
 # ---------------- #
 #    Analytics     #
 # ---------------- #
 google:
-    analytics_id: UA-80669434-1
+    analytics_id: 
