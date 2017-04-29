@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: 知识改变命运
+description: 黑夜给了我黑色的眼睛,我却用它寻找光明
 keywords: onefor1
 comments: true
 menu: 关于
