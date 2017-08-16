@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode1 Two Sum
+title: LeeCode8 String to Integer (atoi)
 categories: [LeetCode]
 description: LeetCode
 keywords: LeetCode
@@ -9,10 +9,10 @@ keywords: LeetCode
 Implement atoi to convert a string to an integer.
 
 这里主要注意以下几个地方：
-（1）数字开始之前的空格都要忽略
-（2）数字只能以'+', '-', '0'开头
-（3）数字开始之后，若出现任何非数字字符，则停止，后面的所有字符将忽略不计
-（4）越界问题，数字总大小不能大于integer的最大值，或者小于interger的最小值
+1. 数字开始之前的空格都要忽略
+2. 数字只能以'+', '-', '0'开头
+3. 数字开始之后，若出现任何非数字字符，则停止，后面的所有字符将忽略不计
+4. 越界问题，数字总大小不能大于integer的最大值，或者小于interger的最小值
 
 ```c++
 class Solution {
