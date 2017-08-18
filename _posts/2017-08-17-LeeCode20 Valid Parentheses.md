@@ -11,7 +11,6 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 
 我的思路：遇到'(', '{', '[' 就存入List，遇到')', '}', ']'则pop出List中的最后一个元素与它匹配
 
-Python第一版：
 ```python
 class Solution(object):
     def isValid(self, s):
@@ -39,10 +38,27 @@ class Solution(object):
         return True
 ```
 
+```python
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        stack = [] #store the left brackets
+        brackets = {')':'(', '}':'{', ']':'['}
+        for ch in s:
+            if ch not in brackets:
+                stack.append(ch)
+            else:
+                if not stack: #剩余右括号
+                    return False
+                if stack.pop() != brackets[ch]: #不匹配
+                    return False
+                
+        return not stack
+```
 
-
-
-C++版：不用map效率会快一些
 ```c++
 class Solution {
 public:
