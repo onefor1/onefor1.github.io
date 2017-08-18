@@ -39,6 +39,7 @@ class Solution(object):
         return True
 ```
 
+
 Python第二版：
 ```python
 class Solution(object):
@@ -53,13 +54,14 @@ class Solution(object):
             if ch not in brackets:
                 stack.append(ch)
             else:
-                if not stack:
+                if not stack: #剩余右括号
                     return False
-                if stack.pop() != brackets[ch]:
+                if stack.pop() != brackets[ch]: #不匹配
                     return False
                 
         return not stack
 ```
+
 
 C++版：不用map效率会快一些
 ```c++
