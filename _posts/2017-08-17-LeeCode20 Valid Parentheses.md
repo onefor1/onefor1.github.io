@@ -53,12 +53,12 @@ class Solution(object):
             if ch not in brackets:
                 stack.append(ch)
             else:
-                if not stack: #剩余右括号
+                if not stack:
                     return False
-                if stack.pop() != brackets[ch]: #不匹配
+                if stack.pop() != brackets[ch]:
                     return False
                 
-        return not stack #剩余左括号
+        return not stack
 ```
 
 C++版：不用map效率会快一些
