@@ -40,7 +40,7 @@ class Solution(object):
 ```
 
 Python第二版：
-```Python
+```python
 class Solution(object):
     def isValid(self, s):
         """
